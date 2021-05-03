@@ -14,5 +14,3 @@ time.sleep(5.0)
 
 motor_left.stop()
 motor_right.stop()
-
-
