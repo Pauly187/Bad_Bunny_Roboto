@@ -4,11 +4,11 @@ import time
 # let one wheel of the Marsrover move foreward
 
 # Connect the output A to the motor
-motor_left = ev3.LargeMotor('outA')
-motor_right = ev3.LargeMotor('outD')
+m_l = ev3.LargeMotor('outA')
+m_r = ev3.LargeMotor('outD')
 
-motor_left.run_forever(speed_sp=500)
-motor_right.run_forever(speed_sp=500)
+m_l.run_timed(speed_sp=500)
+m_r.run_timed(speed_sp=500)
 
 time.sleep(5.0)
 

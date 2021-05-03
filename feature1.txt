@@ -1,3 +1,4 @@
 Feature 1?
 
-ssh
+m_r = Motor Right -> Out D
+m_l = Motor Left -> Out A
