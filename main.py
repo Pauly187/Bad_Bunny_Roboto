@@ -1,9 +1,5 @@
-import ev3dev.ev3 as ev3
-#Paulys Änderungen
-#Hola Max, am besten hier nur Pushen wenn wir uns abgesprochen haben, nicht das wir den Code scuffen
-
-
 #!/usr/bin/env python3
+import ev3dev.ev3 as ev3
 from time import sleep
 # let one wheel of the Marsrover move foreward
 
