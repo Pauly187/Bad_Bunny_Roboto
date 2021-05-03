@@ -15,5 +15,7 @@ motor_left.run_timed(time_sp=3000, speed_sp=500)
 motor_right.run_timed(time_sp=3000, speed_sp=500)
 # wait till the motor has stopped
 motor_left.wait_while('running')
+motor_right.wait_while('running')
+
 ev3.Sound.speak("Me amo Bad Bunny")
 sleep(1)
