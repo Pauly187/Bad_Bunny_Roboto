@@ -7,7 +7,7 @@ m_l = ev3.LargeMotor('outA')
 m_r = ev3.LargeMotor('outD')
 
 #sensors
-us = ev3.UltrasonicSensor('in4')
+us = ev3.UltrasonicSensor()
 
 #UltrasonicSensor in distance mode
 us.mode='US-DIST-CM'
@@ -17,11 +17,17 @@ units = us.units
 
 distance = us.value()
 
-m_l.run_forever(speed_sp=500)
-m_r.run_forever(speed_sp=500)
+while true:
+    distance = us.value
+    m_r.run_forever(speed_sp=500)
+    m_l.run_forever(speed_sp=500)
+    if distance <= 5:
+    m_r.run_forever(speed_sp=0)
+    m_l.run_forever(speed_sp=0)
 
-if distance <= 5:
-    m_l.stop and m_r.stop
+
+
+
 
 
 
