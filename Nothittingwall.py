@@ -17,10 +17,12 @@ units = us.units
 
 distance = us.value()
 
+m_l.run_forever(speed_sp=500)
+m_r.run_forever(speed_sp=500)
 
+if distance <= 5:
+    m_l.stop and m_r.stop
 
-
-if distance < 10:
 
 
 
