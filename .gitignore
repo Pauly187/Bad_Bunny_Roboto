@@ -1,1 +1,32 @@
-/venv
+#!/usr/bin/env python3
+import ev3dev.ev3 as ev3
+import time
+
+#motors
+m_l = ev3.LargeMotor('outA')
+m_r = ev3.LargeMotor('outD')
+
+#gyrosensor
+gy = ev3.GyroSensor('out1')
+
+#put sensor in angel mode
+gy.mode='GYRO-ANG'
+units = gy.units
+
+#predefined actions
+STOP = Action(drive_speed=0)
+FORWARD_FAST = Action(drive_speed=150)
+FORWARD_SLOW = Action(drive_speed=40)
+TURN_RIGHT = Action(drive speed=0
+
+#First straight
+m_l.run_timed(time_sp=2000, speed_sp=500)
+m_r.run_timed(time_sp=2000, speed_sp=500)
+m_l.wait_while('running')
+m_r.wait_while('running')
+
+#turn 90 grad right
+
+
+
+
