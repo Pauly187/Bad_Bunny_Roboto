@@ -14,9 +14,9 @@ us.mode='US-DIST-CM'
 
 #unit of distance cm
 units = us.units
-
-while True:
-    distance = us.value
+distance = 100
+while us.value()< 100:
+    distance = us.value()
     m_r.run_forever(speed_sp=300)
     m_l.run_forever(speed_sp=300)
     if distance > 100:
@@ -24,8 +24,8 @@ while True:
         m_l.run_forever(speed_sp=0)
         break
 
-while True:
-    distance = us.value
+while us.value() > 100:
+    distance = us.value()
     m_r.run_forever(speed_sp=300)
     m_l.run_forever(speed_sp=300)
     if distance < 100:
@@ -33,13 +33,20 @@ while True:
         m_l.run_forever(speed_sp=0)
         break
 
+
+m_l.run_to_rel_pos(position_sp=-200, speed_sp=300, stop_action="brake")
+m_r.run_to_rel_pos(position_sp=-200, speed_sp=300, stop_action="brake")
+m_l.wait_while('running')
+m_r.wait_while('running')
+
 m_l.run_to_rel_pos(position_sp=-278, speed_sp=300, stop_action="brake")
 m_l.wait_while('running')
 
-m_l.run_to_rel_pos(position_sp=-520, speed_sp=300, stop_action="brake")
-m_r.run_to_rel_pos(position_sp=-520, speed_sp=300, stop_action="brake")
+m_l.run_to_rel_pos(position_sp=-320, speed_sp=300, stop_action="brake")
+m_r.run_to_rel_pos(position_sp=-320, speed_sp=300, stop_action="brake")
 m_l.wait_while('running')
 m_r.wait_while('running')
 
-m_r.run_to_rel_pos(position_sp=-100, speed_sp=300, stop_action="brake")
+m_r.run_to_rel_pos(position_sp=-278, speed_sp=300, stop_action="brake")
 m_r.wait_while('running')
+
